@@ -117,7 +117,7 @@ export default {
     // Get All Products
     async getProducts() {
       try {
-        const response = await axios.get("http://192.168.18.23:5000/downtimes/raw-material");
+        const response = await axios.get("http://127.0.0.1:5000/downtimes/rmp");
         this.items = response.data;
       } catch (err) {
         console.log(err);

@@ -10,14 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/vue-fontawesome": "^2.0.6",
     "bulma-calendar": "^6.1.15",
     "cors": "^2.8.5",
     "datetimepicker": "^0.1.39",
     "express": "^4.17.1",
+    "mysql": "^2.18.1",
     "mysql2": "^2.2.5"
   }
 }

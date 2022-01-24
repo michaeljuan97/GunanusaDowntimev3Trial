@@ -164,7 +164,7 @@ export default {
     async getDowntimebyId() {
       try {
         const response = await axios.get(
-          `http://192.168.18.23:5000/downtimes/${this.$route.params.id}`
+          `http://127.0.0.1:5000/downtimes/${this.$route.params.id}`
         );
         this.DATETIME = response.data.Datetime;
         this.SKU = response.data.SKU;

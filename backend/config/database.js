@@ -1,35 +1,15 @@
-import mysql from "mysql2"
-
-// create the connection to database
-// const db = mysql.createConnection({
-//     host: '127.0.0.1',
-//     user: 'root',
-//     password: 'highlight',
-//     database: 'gunanusa',
-//     timezone:'Asia/Jakarta'
-//   });
-   
-// export default db;
+import mysql from "mysql"
 
 var db;
 
 function handleDisconnect(){
   db = mysql.createConnection({
-    host: '192.168.18.23',
+    host: '127.0.0.1',
     user: 'root',
-    password: 'highlight',
+    password: 'C0mpn3t!',
     database: 'gunanusa'
     // timezone:'Asia/Jakarta'
     })
-// db = mysql.createPool({
-//     connectionLimit: 100, //important
-//     host: '127.0.0.1',
-//     user: 'root',
-//     password: 'highlight',
-//     database: 'gunanusa',
-//     debug: false
-//     })
-
 
   db.connect(function(err) {
       if (err){
@@ -42,11 +22,18 @@ function handleDisconnect(){
   db.on('error', function(err){
       console.log("db error", err);
       if(err.code === 'PROTOCOL_CONNECTION_LOST'){
+          db.release();
           handleDisconnect();
       }else {
           throw err;
+          db.end();
+          handleDisconnect();
       }
   });
 };
+
+setInterval(function () {
+    db.query('SELECT 1');
+}, 5000);
 handleDisconnect();
 export default db;

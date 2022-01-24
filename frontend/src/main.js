@@ -2,9 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
  
 import App from './App.vue'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // import Create from './components/AddProduct.vue'
 import Edit from './components/EditDowntime.vue'
 import Index from './components/DowntimeList.vue'
@@ -13,8 +13,8 @@ import IndexPasta from './components/DowntimeListPasta.vue'
 import IndexAlmond from './components/DowntimeListAlmond.vue'
 import IndexRMP from './components/DowntimeListRMP.vue'
 
-library.add(faUserSecret)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+// library.add(faUserSecret)
+// Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 
 Vue.use(VueRouter)

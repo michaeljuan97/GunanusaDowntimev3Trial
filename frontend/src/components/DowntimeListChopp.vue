@@ -118,15 +118,35 @@ export default {
     // Get All Products
     async getProducts() {
       try {
-        const response = await axios.get("http://192.168.18.23:5000/downtimes/chopp");
+        const response = await axios.get("http://127.0.0.1:5000/downtimes/chopp");
         this.items = response.data;
       } catch (err) {
         console.log(err);
       }
     },
 
-
   },
+    
+    //  async getProducts() {
+    //   setInterval(axios.get("http://192.168.18.23:5000/downtimes/chopp").then(response => {
+    //     this.items = response.data;
+    //   }), 1000);
+    // async getProducts() {
+    //   setInterval(axios.get("http://192.168.18.23:5000/downtimes/chopp").then(response => {
+    //     this.items = response.data;
+    //     // console.log(this.items);
+    //   }), 1000);
+    // }
+    // },
+      // setInterval(() => {
+      //   this.getProducts();
+      // }, 5000),
+  
+    
+   
+
+
+  
 
 
 
