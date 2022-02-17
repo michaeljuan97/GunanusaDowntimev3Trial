@@ -6,7 +6,7 @@ function handleDisconnect(){
   db = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
-    password: 'C0mpn3t!',
+    password: 'highlight',
     database: 'gunanusa'
     // timezone:'Asia/Jakarta'
     })

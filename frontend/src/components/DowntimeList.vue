@@ -117,7 +117,7 @@ export default {
     // Get All Products
     async getProducts() {
       try {
-        const response = await axios.get("http://127.0.0.1:5000/downtimes/");
+        const response = await axios.get("http://192.168.0.93:5000/downtimes/");
         this.items = response.data;
       } catch (err) {
         console.log(err);

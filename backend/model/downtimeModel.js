@@ -51,7 +51,7 @@ export const getDowntimeAlmond = (result) => {
 
 //get downtime line RMP
 export const getDowntimeRMP = (result) => {
-    db.query("SELECT id, date_format(Datetime,'%d %b %Y %T') AS Datetime ,SKU, Status, Reason, DowntimeLoc, PIC, Catatan, lineName FROM downtime_proxy WHERE status IN ('STANDBY','BREAKDOWN','SETUP') and lineName = 'RMP' ORDER BY id DESC", (err, results) => {                 
+    db.query("SELECT id, date_format(Datetime,'%d %b %Y %T') AS Datetime ,SKU, Status, Reason, DowntimeLoc, PIC, Catatan, lineName FROM downtime_proxy WHERE status IN ('STANDBY','BREAKDOWN','SETUP') and lineName = 'Raw Material' ORDER BY id DESC", (err, results) => {                 
     if(err) {
         console.log(err);
         result(err, null);
