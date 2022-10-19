@@ -28,6 +28,12 @@
         <li class="#">
           <router-link to="/raw-material">Raw Material</router-link>
         </li>
+        <li class="#">
+          <a href="http://192.168.0.93:8087/produktivitas/" target="_blank" rel="noopener noreferrer">Produktivitas</a>
+        </li>
+        <li class="#">
+          <a href="http://192.168.0.93:8087/produktivitas/export_downtime" target="_blank" rel="noopener noreferrer">Export Downtime</a>
+        </li>
       </ul>
     </nav>
 
@@ -118,6 +124,7 @@ export default {
     async getProducts() {
       try {
         const response = await axios.get("http://192.168.0.93:5000/downtimes/");
+        // const response = await axios.get("http://192.168.18.12:5000/downtimes/");
         this.items = response.data;
       } catch (err) {
         console.log(err);

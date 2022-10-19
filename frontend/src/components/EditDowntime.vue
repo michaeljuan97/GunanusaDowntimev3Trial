@@ -79,30 +79,41 @@
         <div class="select">
           <select v-model="REASON">
             <option value="" disabled>---REASON SETUP---</option>
-            <option>1. Ganti Ayakan</option>
-            <option>2. Cleaning</option>
-            <option>3. Persiapan Packaging</option>
-            <option>
-              4. Change Over 1/Ganti produk tanpa setting mesin & cleaning
-            </option>
-            <option>
-              5. Change Over 2/Ganti produk harus setting mesin atau cleaning
-            </option>
-            <option>6. Start up menunggu kacang sangrai</option>
+            <option>1. Start Up Menunggu Kacang Sangrai/Blanched</option>
+            <option>2. Change Over 1/Ganti produk tanpa setting mesin & cleaning</option>
+            <option>3. Change Over 2/Ganti produk harus setting mesin atau cleaning</option>
+            <option>4. Trial</option>
+            <option>5. Ganti Roll Nylon</option>
             <option value="" disabled>---REASON DOWNTIME---</option>
-            <option>1. Setting mesin sebelum metal (Chopp)</option>
-            <option>2. Disimpan di palet</option>
+            <option>1. Setting / Cleaning Mesin</option>
+            <option>2. Disimpan Di Palet / Ditampung Di Bak</option>
             <option>3. Packaging habis</option>
-            <option>4. Menunggu Kacang Sangrai/Proses Chopp</option>
-            <option>5. Sortir ulang</option>
+            <option>4. Persiapan Packaging</option>
+            <option>5. Pengulangan Proses (Recycle / Re-sortir / Re-peeling / Re-sieving / Re-packing / Re-label)</option>
             <option>6. Diturunkan manual</option>
-            <option>7. Setting mesin setelah metal (Metal/Coding)</option>
-            <option>8. Menunggu man power istirahat</option>
+            <option>7. Setting Pisau / Ganti Pisau Cutting</option>
+            <option>8. Menunggu Man Power istirahat</option>
             <option>9. Kerusakan Mesin</option>
-            <option>10. Menunggu isi hopper mesin autopack</option>
-            <option>11. Late start setelah downtime/istirahat</option>
-            <option>12. Downtime Material/Material RPM Terlambat</option>
-          </select>
+            <option>10. Menunggu Isi Hopper Packing</option>
+            <option>11. Late Start Setelah Istirahat</option>
+            <option>12. Material dari RMP Terlambat</option>
+            <option>13. Packing Manual</option>
+            <option>14. Proses Aging Manual</option>
+            <option>15. Ganti Ayakan</option>
+            <option>16. Persiapan Packaging</option>
+            <option>17. Cleaning Area Saat Pergantian Shift</option>
+            <option>18. Temuan Foreign Material</option>
+            <option>19. Proses Stop Karena Parameter Tidak Standar</option>
+            <option>20. Jeda Antar Batch</option>
+            <option>21. Proses Selesai</option>
+            <option value="" disabled>---REASON STANDBY---</option>
+            <option>1. Istirahat</option>
+            <option>2. Jalan Tree Nut</option>
+            <option>3. Jalan Almond Pasta/Almond Milk</option>
+            <option>4. Jalan Almond Retail</option>
+            <option>5. Mengerjakan WO Re-packing/Re-label</option>
+            <option>6. Mengerjakan WO Extra Fine/Dice Fine</option>
+          </select>   
         </div>
       </div>
 
@@ -165,6 +176,7 @@ export default {
       try {
         const response = await axios.get(
           `http://192.168.0.93:5000/downtimes/${this.$route.params.id}`
+          // `http://192.168.18.12:5000/downtimes/${this.$route.params.id}`
         );
         this.DATETIME = response.data.Datetime;
         this.SKU = response.data.SKU;
@@ -183,6 +195,7 @@ export default {
       try {
         await axios.put(
           `http://192.168.0.93:5000/downtimes/${this.$route.params.id}`,
+          // `http://192.168.18.12:5000/downtimes/${this.$route.params.id}`,
           {
             // product_name: this.productName,
             // product_price: this.productPrice,
