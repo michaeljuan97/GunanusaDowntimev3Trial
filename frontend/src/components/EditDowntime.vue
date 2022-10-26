@@ -79,40 +79,32 @@
         <div class="select">
           <select v-model="REASON">
             <option value="" disabled>---REASON SETUP---</option>
-            <option>1. Start Up Menunggu Kacang Sangrai/Blanched</option>
+            <option>1. Start Up Menunggu Kacang Sangrai</option>
             <option>2. Change Over 1/Ganti produk tanpa setting mesin & cleaning</option>
             <option>3. Change Over 2/Ganti produk harus setting mesin atau cleaning</option>
-            <option>4. Trial</option>
-            <option>5. Ganti Roll Nylon</option>
+            <option>4. Ganti Roll Nylon</option>
+      
             <option value="" disabled>---REASON DOWNTIME---</option>
-            <option>1. Setting / Cleaning Mesin</option>
-            <option>2. Disimpan Di Palet / Ditampung Di Bak</option>
-            <option>3. Packaging habis</option>
+            <option>1. Proses melalui cooling tunnel/Aging manual</option>
+            <option>2. Proses packing manual</option>
+            <option>3. Ditampung di bak</option>
             <option>4. Persiapan Packaging</option>
-            <option>5. Pengulangan Proses (Recycle / Re-sortir / Re-peeling / Re-sieving / Re-packing / Re-label)</option>
-            <option>6. Diturunkan manual</option>
-            <option>7. Setting Pisau / Ganti Pisau Cutting</option>
-            <option>8. Menunggu Man Power istirahat</option>
-            <option>9. Kerusakan Mesin</option>
-            <option>10. Menunggu Isi Hopper Packing</option>
-            <option>11. Late Start Setelah Istirahat</option>
-            <option>12. Material dari RMP Terlambat</option>
-            <option>13. Packing Manual</option>
-            <option>14. Proses Aging Manual</option>
-            <option>15. Ganti Ayakan</option>
-            <option>16. Persiapan Packaging</option>
-            <option>17. Cleaning Area Saat Pergantian Shift</option>
-            <option>18. Temuan Foreign Material</option>
-            <option>19. Proses Stop Karena Parameter Tidak Standar</option>
-            <option>20. Jeda Antar Batch</option>
-            <option>21. Proses Selesai</option>
+            <option>5. Jeda antar batch</option>
+            <option>6. Packaging habis</option>
+            <option>7. Cleaning area/Cleaning area saat pergantian shift</option>
+            <option>8. Proses stop karena parameter tidak standard</option>
+            <option>9. Diturunkan manual/Produk OOS</option>
+            <option>10. Setting/Cleaning Manual</option>
+            <option>11. Menunggu man power istirahat</option>
+            <option>12. Kerusakan mesin</option>
+            <option>13. Menunggu isi hopper mesin autopack JKP</option>
+            <option>14. Late start setelah downtime/istirahat</option>
+            <option>15. Downtime material/material RMP terlambat</option>
+      
             <option value="" disabled>---REASON STANDBY---</option>
-            <option>1. Istirahat</option>
-            <option>2. Jalan Tree Nut</option>
-            <option>3. Jalan Almond Pasta/Almond Milk</option>
-            <option>4. Jalan Almond Retail</option>
-            <option>5. Mengerjakan WO Re-packing/Re-label</option>
-            <option>6. Mengerjakan WO Extra Fine/Dice Fine</option>
+            <option>1. Jalan Almond pasta</option>
+            <option>2. Istirahat</option>
+            
           </select>   
         </div>
       </div>
